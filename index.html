@@ -3,67 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousef Portfolio | Florida</title>
+    <title>Yousef | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --dark-color: #1e293b;
+            --bg-color: #f8fafc;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--dark-color);
+            line-height: 1.6;
         }
         header {
-            background: #24292e;
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
             color: white;
-            padding: 2rem 0;
+            padding: 100px 20px;
+            text-align: center;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 900px;
+            margin: -50px auto 50px;
             padding: 20px;
-        }
-        .profile-img {
-            width: 150px;
-            border-radius: 50%;
-            border: 5px solid #fff;
         }
         .card {
             background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
-        .btn {
-            display: inline-block;
-            background: #2ea44f;
-            color: white;
-            padding: 10px 20px;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-item {
+            background: #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .contact-btn {
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s;
         }
+        .btn-email { background: #ea4335; }
+        .btn-linkedin { background: #0077b5; }
+        .btn-github { background: #333; }
+        
+        .contact-btn:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>يوسف | مطور برمجيات</h1>
-    <p>من فلوريدا إلى العالم 🌍</p>
+    <h1>يوسف الهرراوي</h1>
+    <p>Software Developer | Florida 🌴</p>
 </header>
 
 <div class="container">
     <div class="card">
-        <h2>مرحباً! 👋</h2>
-        <p>أنا يوسف، مبرمج طموح مقيم في فلوريدا. أحب بناء الأشياء باستخدام الكود ومشاركة مشاريعي على GitHub.</p>
+        <h2><i class="fas fa-user-astronaut"></i> نبذة عني</h2>
+        <p>أنا مطور شغوف مقيم في فلوريدا، مهتم ببناء تطبيقات ويب ذكية وحلول برمجية مبتكرة. أسعى دائماً لتعلم أحدث التقنيات ومشاركتها مع مجتمع المبرمجين.</p>
     </div>
 
     <div class="card">
-        <h2>مشاريعي 💻</h2>
-        <p>هنا ستجد قائمة بأفضل أعمالي قريباً...</p>
-        <a href="https://github.com/ylahraoui67-pixel" class="btn">تابعني على GitHub</a>
+        <h2><i class="fas fa-code"></i> مهاراتي التقنية</h2>
+        <div class="skills-grid">
+            <div class="skill-item">HTML5 / CSS3</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">UI/UX Design</div>
+        </div>
+    </div>
+
+    <div class="card" id="contact">
+        <h2><i class="fas fa-paper-plane"></i> تواصل معي</h2>
+        <p>هل لديك مشروع أو فكرة؟ أنا متاح للتعاون!</p>
+        <div class="contact-links">
+            <a href="mailto:your-email@example.com" class="contact-btn btn-email"><i class="fas fa-envelope"></i> البريد الإلكتروني</a>
+            <a href="https://linkedin.com/in/your-profile" class="contact-btn btn-linkedin"><i class="fab fa-linkedin"></i> لينكد إن</a>
+            <a href="https://github.com/ylahraoui67-pixel" class="contact-btn btn-github"><i class="fab fa-github"></i> غيت هاب</a>
+        </div>
     </div>
 </div>
 
